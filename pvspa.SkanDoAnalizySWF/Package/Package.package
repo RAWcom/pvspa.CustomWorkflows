@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="b82ff751-3e79-421e-88a2-67e82499ae5e" solutionId="b82ff751-3e79-421e-88a2-67e82499ae5e" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="pvspa.SkanDoAnalizySWF">
+    <features>
+        <featureReference itemId="b5db8b2a-4eb3-462e-af39-451b8a6ad31d" />
+    </features>
+</package>

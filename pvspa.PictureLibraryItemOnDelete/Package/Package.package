@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="0f9ee189-fd56-4c79-8975-6938040c8fc7" solutionId="0f9ee189-fd56-4c79-8975-6938040c8fc7" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="pvspa.PictureLibraryItemOnDelete">
+    <features>
+        <featureReference itemId="8a2f5a51-734b-444e-8e3d-a9e3b0d5d0f2" />
+    </features>
+</package>

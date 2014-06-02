@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.Instalation", "Instalation\pvspa.Instalation.csproj", "{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91} = {DDB8F61B-6161-482F-BD10-4BCEF07ADE91}
+		{B908C646-D838-4204-804A-700D9A35B13D} = {B908C646-D838-4204-804A-700D9A35B13D}
+		{24176252-E799-4A47-A7E3-FBB0C43E306E} = {24176252-E799-4A47-A7E3-FBB0C43E306E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.SkanDoAnalizySWF", "pvspa.SkanDoAnalizySWF\pvspa.SkanDoAnalizySWF.csproj", "{B908C646-D838-4204-804A-700D9A35B13D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.PictureLibraryItemOnDeleting", "pvspa.PictureLibraryItemOnDelete\pvspa.PictureLibraryItemOnDeleting.csproj", "{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.BatchSWF", "pvspa.Batch\pvspa.BatchSWF.csproj", "{24176252-E799-4A47-A7E3-FBB0C43E306E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B908C646-D838-4204-804A-700D9A35B13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B908C646-D838-4204-804A-700D9A35B13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B908C646-D838-4204-804A-700D9A35B13D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B908C646-D838-4204-804A-700D9A35B13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B908C646-D838-4204-804A-700D9A35B13D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B908C646-D838-4204-804A-700D9A35B13D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

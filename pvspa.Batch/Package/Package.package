@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="d5d24fae-6bd7-417e-8262-a1f007a11606" solutionId="d5d24fae-6bd7-417e-8262-a1f007a11606" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="pvspa.Batch">
+    <features>
+        <featureReference itemId="2fd4f6d9-0ec1-4f34-99f3-6039cd257c3d" />
+    </features>
+</package>
