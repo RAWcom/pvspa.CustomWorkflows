@@ -7,8 +7,8 @@
     <ProjectGuid>{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Instalation</RootNamespace>
-    <AssemblyName>Instalation</AssemblyName>
+    <RootNamespace>pvspa.SolutionPackage</RootNamespace>
+    <AssemblyName>pvspa.SolutionPackage</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,7 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\PVSPA Features\PVSPA Features.feature">
+    <None Include="Features\PVSPA EventReceivers\PVSPA EventReceivers.feature">
+      <FeatureId>{80eef15d-efa3-44e0-937d-c817061843e2}</FeatureId>
+    </None>
+    <None Include="Features\PVSPA Workflows\PVSPA Workflows.feature">
       <FeatureId>{fa3906c1-bd4a-4223-af47-c5744d6830d1}</FeatureId>
     </None>
     <None Include="key.snk" />
@@ -65,8 +68,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Features\PVSPA Features\PVSPA Features.Template.xml">
-      <DependentUpon>PVSPA Features.feature</DependentUpon>
+    <Content Include="Features\PVSPA EventReceivers\PVSPA EventReceivers.Template.xml">
+      <DependentUpon>PVSPA EventReceivers.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\PVSPA Workflows\PVSPA Workflows.Template.xml">
+      <DependentUpon>PVSPA Workflows.feature</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

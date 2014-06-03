@@ -20,6 +20,8 @@ namespace pvspa.PictureLibraryItemOnDelete.EventReceiver1
        {
            base.ItemDeleting(properties);
 
+           this.EventFiringEnabled = false;
+
            if (properties.ListTitle != "Skany")
 	        {
                 try
@@ -55,8 +57,9 @@ namespace pvspa.PictureLibraryItemOnDelete.EventReceiver1
                 {
                     
                     throw;
-                } 
+                }
 
+                this.EventFiringEnabled = true ;
 
 	        }
 

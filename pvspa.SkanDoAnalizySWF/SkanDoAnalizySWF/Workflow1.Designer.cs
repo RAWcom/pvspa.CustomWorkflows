@@ -31,6 +31,7 @@ namespace pvspa.SkanDoAnalizySWF.Workflow1
             System.Workflow.ComponentModel.ActivityBind activitybind1 = new System.Workflow.ComponentModel.ActivityBind();
             this.logToHistoryListActivity2 = new Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity();
             this.CoreProcedure = new System.Workflow.Activities.CodeActivity();
+            this.logToHistoryListActivity1 = new Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity();
             this.SequenceActivity1 = new System.Workflow.Activities.SequenceActivity();
             this.onWorkflowActivated1 = new Microsoft.SharePoint.WorkflowActions.OnWorkflowActivated();
             // 
@@ -49,8 +50,19 @@ namespace pvspa.SkanDoAnalizySWF.Workflow1
             this.CoreProcedure.Name = "CoreProcedure";
             this.CoreProcedure.ExecuteCode += new System.EventHandler(this.SelectBatch_ExecuteCode);
             // 
+            // logToHistoryListActivity1
+            // 
+            this.logToHistoryListActivity1.Duration = System.TimeSpan.Parse("-10675199.02:48:05.4775808");
+            this.logToHistoryListActivity1.EventId = Microsoft.SharePoint.Workflow.SPWorkflowHistoryEventType.WorkflowComment;
+            this.logToHistoryListActivity1.HistoryDescription = "";
+            this.logToHistoryListActivity1.HistoryOutcome = "Initiated";
+            this.logToHistoryListActivity1.Name = "logToHistoryListActivity1";
+            this.logToHistoryListActivity1.OtherData = "";
+            this.logToHistoryListActivity1.UserId = -1;
+            // 
             // SequenceActivity1
             // 
+            this.SequenceActivity1.Activities.Add(this.logToHistoryListActivity1);
             this.SequenceActivity1.Activities.Add(this.CoreProcedure);
             this.SequenceActivity1.Activities.Add(this.logToHistoryListActivity2);
             this.SequenceActivity1.Description = "Create/Select Batch";
@@ -81,6 +93,8 @@ namespace pvspa.SkanDoAnalizySWF.Workflow1
 
         #endregion
 
+        private Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity logToHistoryListActivity1;
+
         private Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity logToHistoryListActivity2;
 
         private CodeActivity CoreProcedure;
@@ -88,6 +102,7 @@ namespace pvspa.SkanDoAnalizySWF.Workflow1
         private SequenceActivity SequenceActivity1;
 
         private Microsoft.SharePoint.WorkflowActions.OnWorkflowActivated onWorkflowActivated1;
+
 
 
 

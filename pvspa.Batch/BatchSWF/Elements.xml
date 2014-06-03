@@ -6,10 +6,10 @@ Name="[NAME]" ==> Name="MyWorkflow" -->
 
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Workflow
-     Name="pvspa.Batch"
+     Name="BatchSWF"
      Description="My SharePoint Workflow"
-     Id="4d94fdb7-884f-4b99-a619-fb15aa5a65f8"
-     CodeBesideClass="pvspa.Batch.Workflow1.Workflow1"
+     Id="bd00fee2-4d07-404e-901a-4aa46a110994"
+     CodeBesideClass="pvspa.BatchSWF.pvspa.pvspa"
      CodeBesideAssembly="$assemblyname$">
     <Categories/>
     <MetaData>

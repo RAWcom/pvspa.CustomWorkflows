@@ -1,0 +1,170 @@
+﻿using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Linq;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+using Microsoft.SharePoint;
+using Microsoft.SharePoint.Workflow;
+using Microsoft.SharePoint.WorkflowActions;
+using System.Text;
+
+namespace pvspa.BatchSWF.pvspa
+{
+    public sealed partial class pvspa : SequentialWorkflowActivity
+    {
+        public pvspa()
+        {
+            InitializeComponent();
+        }
+
+        public Guid workflowId = default(System.Guid);
+        public SPWorkflowActivationProperties workflowProperties = new SPWorkflowActivationProperties();
+
+
+        #region Helpers
+
+        private void ShowBatch_In_Menu()
+        {
+            string batchName = workflowProperties.Item["BatchName"].ToString();
+            using (SPSite site = new SPSite(workflowProperties.SiteId))
+            {
+                using (SPWeb web = site.AllWebs[workflowProperties.WebId])
+                {
+                    SPList list = web.Lists[batchName];
+                    list.OnQuickLaunch = true;
+                    list.Update();
+                }
+            }
+
+        }
+
+        private void HideBatch_From_Menu()
+        {
+
+            string batchName = workflowProperties.Item["BatchName"].ToString();
+            using (SPSite site = new SPSite(workflowProperties.SiteId))
+            {
+                using (SPWeb web = site.AllWebs[workflowProperties.WebId])
+                {
+                    SPList list = web.Lists[batchName];
+                    list.OnQuickLaunch = false;
+                    list.Update();
+                }
+            }
+        }
+
+        #endregion
+
+        private void IsOtwarty(object sender, ConditionalEventArgs e)
+        {
+            string batchStatus = workflowProperties.Item["Batch Status"].ToString();
+            if (batchStatus == "Otwarty")
+            {
+                e.Result = true;
+            }
+            else
+            {
+                e.Result = false;
+            }
+        }
+
+        private void IsWeryfikacja(object sender, ConditionalEventArgs e)
+        {
+            string batchStatus = workflowProperties.Item["Batch Status"].ToString();
+            if (batchStatus == "Weryfikacja")
+            {
+                e.Result = true;
+            }
+            else
+            {
+                e.Result = false;
+            }
+        }
+
+        private void IsZweryfikowany(object sender, ConditionalEventArgs e)
+        {
+            string batchStatus = workflowProperties.Item["Batch Status"].ToString();
+            if (batchStatus == "Zweryfikowany")
+            {
+                e.Result = true;
+            }
+            else
+            {
+                e.Result = false;
+            }
+        }
+
+        private void HideFromMenu_ExecuteCode(object sender, EventArgs e)
+        {
+            HideBatch_From_Menu();
+        }
+
+        private void ShowInMenu_ExecuteCode(object sender, EventArgs e)
+        {
+            ShowBatch_In_Menu();
+        }
+
+        private void UpdateSkanDoAnalizy_ExecuteCode(object sender, EventArgs e)
+        {
+            using (SPSite site = new SPSite(workflowProperties.SiteId))
+            {
+                using (SPWeb web = site.AllWebs[workflowProperties.WebId])
+                {
+                    string batchID = workflowProperties.Item.ID.ToString();
+
+                    SPList list = web.Lists["SkanDoAnalizy"];
+
+                    StringBuilder sb = new StringBuilder(@"<OrderBy><FieldRef Name=""ID"" /></OrderBy><Where><Or><Eq><FieldRef Name=""Batch_x002e_ID0"" /><Value Type=""Number"">___BatchID___</Value></Eq><Neq><FieldRef Name=""Batch_Completed"" /><Value Type=""Boolean"">1</Value></Neq></Or></Where>");
+                    sb.Replace("___BatchID___", batchID);
+                    string camlQuery = sb.ToString();
+
+                    SPQuery query = new SPQuery();
+                    query.Query = camlQuery;
+
+                    SPListItemCollection items = list.GetItems(query);
+                    foreach (SPListItem myItem in items)
+                    {
+                        myItem["Batch_Completed"] = true;
+                        myItem.Update();
+                    }
+                }
+            }
+        }
+
+
+        private void SetStatus_Weryfikacja_ExecuteCode(object sender, EventArgs e)
+        {
+            SPItem item = workflowProperties.Item;
+            item["Batch Status"] = "Weryfikacja";
+            item.Update();
+        }
+
+        private void RemoveWorkLib_ExecuteCode(object sender, EventArgs e)
+        {
+            string batchName = workflowProperties.Item["BatchName"].ToString();
+            using (SPSite site = new SPSite(workflowProperties.SiteId))
+            {
+                using (SPWeb web = site.AllWebs[workflowProperties.WebId])
+                {
+                    SPList list = web.Lists[batchName];
+                    list.Delete();
+                }
+            }
+        }
+
+        private void RemoveListItem_ExecuteCode(object sender, EventArgs e)
+        {
+            workflowProperties.Item.Delete();
+        }
+
+
+    }
+}

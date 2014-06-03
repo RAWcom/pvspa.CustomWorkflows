@@ -68,7 +68,9 @@
     <None Include="SkanDoAnalizySWF\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{c1b951d3-d3a9-477c-8ad3-8d2857a58848}</SharePointProjectItemId>
     </None>
-    <None Include="SkanDoAnalizySWF\Elements.xml" />
+    <None Include="SkanDoAnalizySWF\Elements.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Package\Package.package">

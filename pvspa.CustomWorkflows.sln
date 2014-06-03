@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.Instalation", "Instalation\pvspa.Instalation.csproj", "{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.SolutionPackage", "Instalation\pvspa.SolutionPackage.csproj", "{E31AE8F8-64AA-46EA-8F97-500E5E0BE047}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91} = {DDB8F61B-6161-482F-BD10-4BCEF07ADE91}
 		{B908C646-D838-4204-804A-700D9A35B13D} = {B908C646-D838-4204-804A-700D9A35B13D}
