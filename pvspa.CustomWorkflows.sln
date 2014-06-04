@@ -6,6 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.SolutionPackage", "In
 		{DDB8F61B-6161-482F-BD10-4BCEF07ADE91} = {DDB8F61B-6161-482F-BD10-4BCEF07ADE91}
 		{B908C646-D838-4204-804A-700D9A35B13D} = {B908C646-D838-4204-804A-700D9A35B13D}
 		{24176252-E799-4A47-A7E3-FBB0C43E306E} = {24176252-E799-4A47-A7E3-FBB0C43E306E}
+		{50481184-3CC9-49CA-AF0E-1D66EAB069A8} = {50481184-3CC9-49CA-AF0E-1D66EAB069A8}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.SkanDoAnalizySWF", "pvspa.SkanDoAnalizySWF\pvspa.SkanDoAnalizySWF.csproj", "{B908C646-D838-4204-804A-700D9A35B13D}"
@@ -13,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.PictureLibraryItemOnDeleting", "pvspa.PictureLibraryItemOnDelete\pvspa.PictureLibraryItemOnDeleting.csproj", "{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.BatchSWF", "pvspa.Batch\pvspa.BatchSWF.csproj", "{24176252-E799-4A47-A7E3-FBB0C43E306E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvspa.GeneratorPuliNagrodSWF", "pvspa.GeneratorPuliNagrodSWF\pvspa.GeneratorPuliNagrodSWF.csproj", "{50481184-3CC9-49CA-AF0E-1D66EAB069A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +47,12 @@ Global
 		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24176252-E799-4A47-A7E3-FBB0C43E306E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{50481184-3CC9-49CA-AF0E-1D66EAB069A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50481184-3CC9-49CA-AF0E-1D66EAB069A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50481184-3CC9-49CA-AF0E-1D66EAB069A8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{50481184-3CC9-49CA-AF0E-1D66EAB069A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50481184-3CC9-49CA-AF0E-1D66EAB069A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50481184-3CC9-49CA-AF0E-1D66EAB069A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

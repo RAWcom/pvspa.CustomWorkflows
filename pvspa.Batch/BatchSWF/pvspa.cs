@@ -38,9 +38,15 @@ namespace pvspa.BatchSWF.pvspa
             {
                 using (SPWeb web = site.AllWebs[workflowProperties.WebId])
                 {
-                    SPList list = web.Lists[batchName];
-                    list.OnQuickLaunch = true;
-                    list.Update();
+                    try
+                    {
+                        SPList list = web.Lists[batchName];
+                        list.OnQuickLaunch = true;
+                        list.Update();
+                    }
+                    catch (Exception)
+                    { }
+                    
                 }
             }
 
@@ -54,9 +60,15 @@ namespace pvspa.BatchSWF.pvspa
             {
                 using (SPWeb web = site.AllWebs[workflowProperties.WebId])
                 {
-                    SPList list = web.Lists[batchName];
-                    list.OnQuickLaunch = false;
-                    list.Update();
+                    try
+                    {
+                        SPList list = web.Lists[batchName];
+                        list.OnQuickLaunch = false;
+                        list.Update();
+                    }
+                    catch (Exception)
+                    { }
+                    
                 }
             }
         }
@@ -132,7 +144,44 @@ namespace pvspa.BatchSWF.pvspa
                     SPListItemCollection items = list.GetItems(query);
                     foreach (SPListItem myItem in items)
                     {
+                        bool fileExist = true;
+
+                        if (!string.IsNullOrEmpty((string)myItem["Token zgłoszenia"]))
+                        {
+
+                            string fileName = myItem["Token zgłoszenia"].ToString();
+
+                            bool itemFound = false;
+                            
+                            // lookup in relevant BatchLib
+                            SPList batchRegistry = web.Lists["Rejestr Batchów"];
+                            SPListItem batchRegistryItem = batchRegistry.GetItemById(Convert.ToInt32(myItem["Batch.ID"]));
+                            string batchLibName = batchRegistryItem["BatchName"].ToString();
+
+                            try
+                            {
+                                SPList wlist = web.Lists[batchLibName];
+                                foreach (SPListItem witem in wlist.Items)
+                                {
+                                    string tempName = witem["Nazwa"].ToString();
+                                    if (tempName == fileName)
+                                    {
+                                        itemFound = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                throw;
+                            }
+
+
+                            fileExist = itemFound;
+                        }
+
                         myItem["Batch_Completed"] = true;
+                        myItem["IsDeleted"] = !Convert.ToBoolean(fileExist);
                         myItem.Update();
                     }
                 }

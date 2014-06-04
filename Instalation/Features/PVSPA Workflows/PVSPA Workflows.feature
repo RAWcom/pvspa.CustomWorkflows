@@ -3,5 +3,6 @@
   <projectItems>
     <projectItemReference itemId="c1b951d3-d3a9-477c-8ad3-8d2857a58848" projectPath="..\pvspa.SkanDoAnalizySWF\pvspa.SkanDoAnalizySWF.csproj" />
     <projectItemReference itemId="3ff444c0-5d91-489c-8ad6-65b99aee7aad" projectPath="..\pvspa.Batch\pvspa.BatchSWF.csproj" />
+    <projectItemReference itemId="e228e2f2-6053-4058-b663-dcd1b930e2c0" projectPath="..\pvspa.GeneratorPuliNagrodSWF\pvspa.GeneratorPuliNagrodSWF.csproj" />
   </projectItems>
 </feature>

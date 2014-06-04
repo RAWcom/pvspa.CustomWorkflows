@@ -4,14 +4,15 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DDB8F61B-6161-482F-BD10-4BCEF07ADE91}</ProjectGuid>
+    <ProjectGuid>{50481184-3CC9-49CA-AF0E-1D66EAB069A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>pvspa.PictureLibraryItemOnDelete</RootNamespace>
-    <AssemblyName>pvspa.PictureLibraryItemOnDelete</AssemblyName>
+    <RootNamespace>pvspa.GeneratorPuliNagrodSWF</RootNamespace>
+    <AssemblyName>pvspa.GeneratorPuliNagrodSWF</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,20 +48,37 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Security" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.SharePoint.WorkflowActions" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratorPuliNagrodSWF\Workflow1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GeneratorPuliNagrodSWF\Workflow1.designer.cs">
+      <DependentUpon>Workflow1.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
+    <None Include="GeneratorPuliNagrodSWF\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e228e2f2-6053-4058-b663-dcd1b930e2c0}</SharePointProjectItemId>
+    </None>
+    <None Include="GeneratorPuliNagrodSWF\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Package\Package.package">
-      <PackageId>{0f9ee189-fd56-4c79-8975-6938040c8fc7}</PackageId>
+      <PackageId>{5583c5ef-391d-4cda-b639-bdcb6b11db3c}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
     <None Include="Features\Feature1\Feature1.feature">
-      <FeatureId>{8a2f5a51-734b-444e-8e3d-a9e3b0d5d0f2}</FeatureId>
+      <FeatureId>{1fdea36c-ed12-46c1-8033-83f033608d03}</FeatureId>
     </None>
     <None Include="Features\Feature1\Feature1.Template.xml">
       <DependentUpon>Feature1.feature</DependentUpon>

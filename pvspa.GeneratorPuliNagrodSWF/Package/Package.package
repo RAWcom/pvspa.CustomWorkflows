@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="5583c5ef-391d-4cda-b639-bdcb6b11db3c" solutionId="5583c5ef-391d-4cda-b639-bdcb6b11db3c" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="pvspa.GeneratorPuliNagrodSWF">
+    <features>
+        <featureReference itemId="1fdea36c-ed12-46c1-8033-83f033608d03" />
+    </features>
+</package>

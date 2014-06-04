@@ -55,6 +55,7 @@
     <Reference Include="System.Workflow.Runtime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Nagroda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BatchSWF\pvspa.cs">
       <SubType>Component</SubType>
