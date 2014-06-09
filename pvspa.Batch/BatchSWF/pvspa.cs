@@ -134,7 +134,7 @@ namespace pvspa.BatchSWF.pvspa
 
                     SPList list = web.Lists["SkanDoAnalizy"];
 
-                    StringBuilder sb = new StringBuilder(@"<OrderBy><FieldRef Name=""ID"" /></OrderBy><Where><And><Eq><FieldRef Name=""Batch_x002e_ID0"" /><Value Type=""Number"">1</Value></Eq><Neq><FieldRef Name=""Batch_Completed"" /><Value Type=""Boolean"">___BatchID___</Value></Neq></And></Where>");
+                    StringBuilder sb = new StringBuilder(@"<OrderBy><FieldRef Name=""ID"" /></OrderBy><Where><Eq><FieldRef Name=""Batch_x002e_ID0"" /><Value Type=""Number"">___BatchID___</Value></Eq></Where>");
                     sb.Replace("___BatchID___", batchID);
                     string camlQuery = sb.ToString();
 
